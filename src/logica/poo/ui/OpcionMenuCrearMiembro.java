@@ -6,4 +6,9 @@ public class OpcionMenuCrearMiembro extends OpcionMenu{
     public void ejecutar() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Crear cliente/miembro.";
+    }
 }

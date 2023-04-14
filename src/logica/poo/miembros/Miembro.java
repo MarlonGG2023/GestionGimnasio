@@ -1,24 +1,23 @@
 package logica.poo.miembros;
-import java.util.Date;
 import java.time.LocalDate;
 
 public class Miembro {
 
-    private int id;
+    private static int id;
     private int numMiembro;
     private String nombre;
     private String apellido;
     private String correo;
     private LocalDate fechaInicioGim;
-    private Date fechaInicioMem;
+    private LocalDate fechaInicioMem;
     private int duracionMem;
-    private Date fechaFinMem;
+    private LocalDate fechaFinMem;
     private float deudaMiembro;
 
 
-    public Miembro (int id, int numMiembro, String nombre, String apellido, String correo,
-                    LocalDate fechaInicioGim, Date fechaInicioMem, int duracionMem, Date fechaFinMem,
-                    float deudaMiembro){
+    public Miembro(int id, int numMiembro, String nombre, String apellido, String correo,
+                   LocalDate fechaInicioGim, LocalDate fechaInicioMem, int duracionMem, LocalDate fechaFinMem,
+                   float deudaMiembro) {
 
         this.id = id;
         this.numMiembro = numMiembro;
@@ -32,12 +31,8 @@ public class Miembro {
         this.deudaMiembro = deudaMiembro;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    private static int getId() {
+        return Miembro.id++;
     }
 
     public int getNumMiembro() {
@@ -80,11 +75,11 @@ public class Miembro {
         this.fechaInicioGim = fechaInicioGim;
     }
 
-    public Date getFechaInicioMem() {
+    public LocalDate getFechaInicioMem() {
         return fechaInicioMem;
     }
 
-    public void setFechaInicioMem(Date fechaInicioMem) {
+    public void setFechaInicioMem(LocalDate fechaInicioMem) {
         this.fechaInicioMem = fechaInicioMem;
     }
 
@@ -96,11 +91,11 @@ public class Miembro {
         this.duracionMem = duracionMem;
     }
 
-    public Date getFechaFinMem() {
+    public LocalDate getFechaFinMem() {
         return fechaFinMem;
     }
 
-    public void setFechaFinMem(Date fechaFinMem) {
+    public void setFechaFinMem(LocalDate fechaFinMem) {
         this.fechaFinMem = fechaFinMem;
     }
 
@@ -114,8 +109,12 @@ public class Miembro {
 
     @Override
     public String toString() {
-        return "Mi cedula es " + id + ", soy el miembro numero " + numMiembro + ", mi nombre es" + nombre + " " + apellido + ". Mi correo es " + correo
-                + " e inicie en el gimnasio el " + fechaInicioGim  + ", inicie la membresia el " + fechaInicioMem + ". Mi membresia dura " + duracionMem
-                + " y se acaba el " + fechaFinMem + ". Al terminar debo " + deudaMiembro;
+
+        return "Mi id es " + Miembro.getId() + ", mi número de miembro es " + getNumMiembro() +
+                ". Me llamo " + getNombre()  + " " + getApellido() +  ",  mi correo es " +
+                getCorreo() + ", inicie en el  GYM el " + getFechaInicioGim() + " y obtuve mi membresia el " +
+                getFechaInicioMem() + ", la cual tiene una duración de " + getDuracionMem() + ", es decir, se acaba el " +
+                getFechaFinMem() + ". Mi deuda con el GYM es de " + getDeudaMiembro();
     }
 }
+

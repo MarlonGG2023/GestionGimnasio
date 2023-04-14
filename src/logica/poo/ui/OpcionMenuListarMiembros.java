@@ -6,4 +6,9 @@ public class OpcionMenuListarMiembros extends OpcionMenu {
     public void ejecutar() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Listar miembros/clientes.";
+    }
 }

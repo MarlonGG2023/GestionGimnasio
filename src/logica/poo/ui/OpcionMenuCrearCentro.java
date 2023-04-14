@@ -6,4 +6,10 @@ public class OpcionMenuCrearCentro extends OpcionMenu {
     public void ejecutar() {
 
     }
+
+
+    @Override
+    public String toString() {
+        return "Crear centro de acondicionamiento.";
+    }
 }

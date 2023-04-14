@@ -5,4 +5,9 @@ public class OpcionMenuMiembrosCentro extends OpcionMenu {
     public void ejecutar() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Listar miembros del centro de acondicionamiento.";
+    }
 }

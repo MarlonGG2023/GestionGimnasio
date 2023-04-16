@@ -1,10 +1,14 @@
 package logica.poo.ui;
+import logica.poo.centros.*;
+import logica.poo.operaciones.*;
 
 public class OpcionMenuListarCentros extends OpcionMenu{
 
     @Override
     public void ejecutar() {
-        System.out.println("Crack");
+        OperacionesCentros op = new OperacionesCentros();
+        op.listarCentros();
+        //System.out.println("Crack");
     }
 
     @Override

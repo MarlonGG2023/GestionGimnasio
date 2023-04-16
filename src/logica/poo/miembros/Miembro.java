@@ -12,12 +12,12 @@ public class Miembro {
     private LocalDate fechaInicioMem;
     private int duracionMem;
     private LocalDate fechaFinMem;
-    private float deudaMiembro;
+    private double deudaMiembro;
 
 
     public Miembro(int id, int numMiembro, String nombre, String apellido, String correo,
                    LocalDate fechaInicioGim, LocalDate fechaInicioMem, int duracionMem, LocalDate fechaFinMem,
-                   float deudaMiembro) {
+                   double deudaMiembro) {
 
         this.id = id;
         this.numMiembro = numMiembro;
@@ -99,11 +99,11 @@ public class Miembro {
         this.fechaFinMem = fechaFinMem;
     }
 
-    public float getDeudaMiembro() {
+    public double getDeudaMiembro() {
         return deudaMiembro;
     }
 
-    public void setDeudaMiembro(float deudaMiembro) {
+    public void setDeudaMiembro(double deudaMiembro) {
         this.deudaMiembro = deudaMiembro;
     }
 

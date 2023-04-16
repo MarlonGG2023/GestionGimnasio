@@ -7,15 +7,16 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class MultiClub extends Miembro {
-    private Miembro miembro;
+    private Membresia membresia;
     private Centro centros;
     private int puntos;
 
 
+
     public MultiClub (int id, String nombre, String apellido, String correo,
-                      LocalDate fechaInicioGim, LocalDate fechaInicioMem, int duracionMem, LocalDate fechaFinMem,
-                      double deudaMiembro){
-            super(id, nombre, apellido, correo, fechaInicioGim, fechaInicioMem, duracionMem, fechaFinMem, deudaMiembro);
+                      LocalDate fechaInicioGim, LocalDate fechaMembresia, int duracion){
+            super(id, nombre, apellido, correo, fechaInicioGim, fechaMembresia, duracion);
+
     }
 
     public int getPuntos(){

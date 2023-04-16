@@ -8,7 +8,6 @@ public class OpcionMenuListarCentros extends OpcionMenu{
     public void ejecutar() {
 
         OperacionesCentros.listarCentros();
-        //System.out.println("Crack");
     }
 
     @Override

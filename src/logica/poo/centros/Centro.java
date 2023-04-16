@@ -11,7 +11,7 @@ public class Centro {
     private String direccion;
     private TipoCentro tipoCentro;
     private double tarifa;
-    private ArrayList<Miembro> miembroCentro;
+    private static ArrayList<Miembro> miembroCentro;
 
 
     public Centro(String nombre, String direccion, TipoCentro tipoCentro, double tarifa) {
@@ -87,7 +87,8 @@ public class Centro {
             sb.append("Id del centro de acondicionamiento: " + getIdCentro()).append(", ")
                     .append("nombre del centro de acondicionamiento: " + nombre).append(", ")
                     .append("número del miembro: " + miembro.getNumMiembro()).append(", ")
-                    .append("nombre del miembro: " + miembro.getNombre() + " " + miembro.getApellido()).append(" ,")
+                    .append("nombre del miembro: " + miembro.getNombre()).append(", ")
+                    .append("Apellido del miembro: " + miembro.getApellido()).append(", ")
                     .append("Tipo de miembro: " + miembro);
         }
         return sb.toString();
@@ -99,7 +100,6 @@ public class Centro {
                 ", nombre = " + nombre + '\'' +
                 ", direccion = ' " + direccion + '\'' +
                 ", tipoCentro = " + tipoCentro +
-                ", tarifa = " + tarifa +
-                '}';
+                ", tarifa = " + tarifa;
     }
 }

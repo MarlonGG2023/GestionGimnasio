@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class MenuConsola {
 
     private ArrayList<OpcionMenu> om;
-    private int opcion;
 
     public MenuConsola (){
 
@@ -18,8 +17,9 @@ public class MenuConsola {
     }
 
     public void lanzarMenu(){
-        //do{
-            System.out.println("*** Menu de opciones ***");
+        int opcion;
+        do{
+            System.out.println("\n*** Menu de opciones ***");
             for (int i=0; i < om.size(); i++){
                 System.out.println((i+1) + ". " + om.get(i));
             }
@@ -28,11 +28,11 @@ public class MenuConsola {
             System.out.println("Indique el número de opción: ");
             opcion = leer.nextInt();
 
-            if (opcion >= 1 && opcion <= om.size()){
+            if (opcion > 0 && opcion <= om.size()){
                 om.get(opcion-1).ejecutar();
             }
-        /*}
-        while(opcion != om.size()+1);*/
+        }
+        while(opcion != om.size()+1);
 
 
     }

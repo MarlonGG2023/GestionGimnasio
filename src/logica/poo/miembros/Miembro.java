@@ -9,26 +9,20 @@ public class Miembro {
     private String apellido;
     private String correo;
     private LocalDate fechaInicioGim;
-    private LocalDate fechaInicioMem;
-    private int duracionMem;
-    private LocalDate fechaFinMem;
     private double deudaMiembro;
+    private Membresia membresia;
 
 
     public Miembro(int id, String nombre, String apellido, String correo,
-                   LocalDate fechaInicioGim, LocalDate fechaInicioMem, int duracionMem, LocalDate fechaFinMem,
-                   double deudaMiembro) {
-
+                   LocalDate fechaInicioGim, LocalDate fechaMembresia, int duracion) {
 
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.fechaInicioGim = fechaInicioGim;
-        this.fechaInicioMem = fechaInicioMem;
-        this.duracionMem = duracionMem;
-        this.fechaFinMem = fechaFinMem;
-        this.deudaMiembro = deudaMiembro;
+        membresia = new Membresia(fechaMembresia, duracion);
+        membresia.getFechaVencimiento();
     }
 
     public int getId() {
@@ -75,28 +69,17 @@ public class Miembro {
         this.fechaInicioGim = fechaInicioGim;
     }
 
-    public LocalDate getFechaInicioMem() {
-        return fechaInicioMem;
+    public LocalDate getFechaMembresia(){
+        return membresia.getFechaMembresia();
     }
 
-    public void setFechaInicioMem(LocalDate fechaInicioMem) {
-        this.fechaInicioMem = fechaInicioMem;
+    public int getDuracion(){
+
+        return membresia.getDuracion();
     }
 
-    public int getDuracionMem() {
-        return duracionMem;
-    }
-
-    public void setDuracionMem(int duracionMem) {
-        this.duracionMem = duracionMem;
-    }
-
-    public LocalDate getFechaFinMem() {
-        return fechaFinMem;
-    }
-
-    public void setFechaFinMem(LocalDate fechaFinMem) {
-        this.fechaFinMem = fechaFinMem;
+    public LocalDate getFechaVencimiento(){
+        return membresia.getFechaVencimiento();
     }
 
     public double getDeudaMiembro() {
@@ -111,10 +94,10 @@ public class Miembro {
     public String toString() {
 
         return "Mi id es " + getId() + ", mi número de miembro es " + getNumMiembro() +
-                ". Me llamo " + getNombre()  + " " + getApellido() +  ",  mi correo es " +
+                ". Me llamo " + getNombre()  + "  " + getApellido() +  ",  mi correo es " +
                 getCorreo() + ", inicie en el  GYM el " + getFechaInicioGim() + " y obtuve mi membresia el " +
-                getFechaInicioMem() + ", la cual tiene una duración de " + getDuracionMem() + ", es decir, se acaba el " +
-                getFechaFinMem() + ". Mi deuda con el GYM es de " + getDeudaMiembro();
+                membresia.getFechaMembresia() + ", la cual tiene una duración de " + membresia.getDuracion() + ", es decir, se acaba el " +
+                membresia.getFechaVencimiento();
     }
 }
 

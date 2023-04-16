@@ -21,6 +21,9 @@ public class OperacionesMiembros {
     }
 
     public static void listarMiembros(){
-        System.out.println(miembro.toString());
+        for(Miembro miembro1 : miembro){
+            System.out.println("\n" + miembro1);
+        }
+
     }
 }

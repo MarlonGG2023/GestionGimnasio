@@ -2,7 +2,6 @@ package logica.poo.miembros;
 
 import java.time.LocalDate;
 
-import java.time.temporal.ChronoUnit;
 
 public class Membresia {
     private LocalDate fechaMembresia;
@@ -32,11 +31,8 @@ public class Membresia {
         this.duracion = duracion;
     }
 
-    public LocalDate fechaVencimiento(){
+    public LocalDate getFechaVencimiento(){
         //Aquí va la operacion para obtener la fecha de vencimiento
-        long diasSumados = getDuracion();
-        LocalDate fechaVencimiento;
-        fechaVencimiento = fechaMembresia.plus(diasSumados,ChronoUnit.DAYS) ;
-        return fechaVencimiento;
+        return fechaMembresia.plusDays(duracion);
     }
 }

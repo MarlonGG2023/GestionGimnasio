@@ -8,19 +8,20 @@ import java.util.Scanner;
 
 public class OperacionesCentros {
 
-    private ArrayList<Centro> centro;
+    private static ArrayList<Centro> c;
 
     public OperacionesCentros(){
-        centro = new ArrayList<Centro>();
+        c = new ArrayList<Centro>();
     }
-    public void agregar(Centro centro){
-        this.centro.add(centro);
+    public static void agregar(Centro centro){
+        c.add(centro);
         System.out.println("Se ha agregado el centro.");
         Scanner sc = new Scanner(System.in);
         MenuConsola menu = new MenuConsola();
         OpcionMenuCrearCentro omcc = new OpcionMenuCrearCentro();
         System.out.println("Desea continuar operando en crear centro(si=1/no=0): ");
         int resp = sc.nextInt();
+
 
         if(resp == 1){
             omcc.ejecutar();
@@ -35,17 +36,17 @@ public class OperacionesCentros {
         }
 
     }
-    public void listarCentros(){
-        for (int i = 0; i <= centro.size(); i++){
+    public static void listarCentros(){
+        for (int i = 0; i <= c.size(); i++){
             System.out.println(getCentro().toString());
         }
     }
-    public ArrayList<Centro> getCentro() {
-        return centro;
+    public static ArrayList<Centro> getCentro() {
+        return c;
     }
 
-    public Centro buscarCentro(int idCentro){
-        for(Centro centro : centro){
+    public static Centro buscarCentro(int idCentro){
+        for(Centro centro : c){
             if(centro.getIdCentro() == idCentro){
                 return centro;
             }

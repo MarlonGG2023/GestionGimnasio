@@ -39,11 +39,20 @@ public class Centro {
     }
 
     public void agregarMiembro(Miembro m) {
-        m.toString();
+        miembroCentro.add(m);
     }
 
     public String getMiembro() {
-        return toString();
+        StringBuilder sb = new StringBuilder();
+        for (Miembro miembro : miembroCentro){
+
+            sb.append("Id del centro de acondicionamiento: " + getIdCentro()).append(", ")
+                    .append("nombre del centro de acondicionamiento: " + nombre).append(", ")
+                    .append("número del miembro: " + miembro.getNumMiembro()).append(", ")
+                    .append("nombre del miembro: " + miembro.getNombre() + " " + miembro.getApellido()).append(" ,")
+                    .append("Tipo de miembro: " + miembro);
+        }
+        return sb.toString();
     }
 
     @Override

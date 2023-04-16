@@ -5,17 +5,13 @@ import java.util.ArrayList;
 
 public class OperacionesMiembros {
 
-    private ArrayList<Miembro> miembro;
+    private static ArrayList<Miembro> miembro = new ArrayList<Miembro>();
 
-    public OperacionesMiembros(){
-        miembro = new ArrayList<Miembro>();
+    public static void agregarMiembro(Miembro m){
+        miembro.add(m);
     }
 
-    public void agregarMiembro(Miembro m){
-        this.miembro.add(m);
-    }
-
-    public Miembro buscarMiembro(int numMiembro){
+    public static Miembro buscarMiembro(int numMiembro){
         for(Miembro miembro : miembro){
             if(miembro.getNumMiembro() == numMiembro){
                 return miembro;
@@ -24,7 +20,7 @@ public class OperacionesMiembros {
         return null;
     }
 
-    public void listarMiembros(){
+    public static void listarMiembros(){
         System.out.println(miembro.toString());
     }
 }

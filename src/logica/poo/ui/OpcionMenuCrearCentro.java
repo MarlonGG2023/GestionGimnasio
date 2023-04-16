@@ -23,8 +23,7 @@ public class OpcionMenuCrearCentro extends OpcionMenu {
 
 
         Centro centro = new Centro(nombre, dir, tipoCentro, tarifa);
-        OperacionesCentros op = new OperacionesCentros();
-        op.agregar(centro);
+        OperacionesCentros.agregar(centro);
     }
 
 

@@ -3,8 +3,8 @@ import java.time.LocalDate;
 
 public class Miembro {
 
-    private static int id;
-    private int numMiembro;
+    private int id;
+    private static int numMiembro;
     private String nombre;
     private String apellido;
     private String correo;
@@ -15,12 +15,12 @@ public class Miembro {
     private double deudaMiembro;
 
 
-    public Miembro(int id, int numMiembro, String nombre, String apellido, String correo,
+    public Miembro(int id, String nombre, String apellido, String correo,
                    LocalDate fechaInicioGim, LocalDate fechaInicioMem, int duracionMem, LocalDate fechaFinMem,
                    double deudaMiembro) {
 
+
         this.id = id;
-        this.numMiembro = numMiembro;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
@@ -31,16 +31,16 @@ public class Miembro {
         this.deudaMiembro = deudaMiembro;
     }
 
-    private static int getId() {
-        return Miembro.id++;
+    public int getId() {
+        return id;
     }
 
-    public int getNumMiembro() {
-        return numMiembro;
+    public static int getNumMiembro() {
+        return numMiembro++;
     }
 
     public void setNumMiembro(int numMiembro) {
-        this.numMiembro = numMiembro;
+        return;
     }
 
     public String getNombre() {
@@ -110,7 +110,7 @@ public class Miembro {
     @Override
     public String toString() {
 
-        return "Mi id es " + Miembro.getId() + ", mi número de miembro es " + getNumMiembro() +
+        return "Mi id es " + getId() + ", mi número de miembro es " + getNumMiembro() +
                 ". Me llamo " + getNombre()  + " " + getApellido() +  ",  mi correo es " +
                 getCorreo() + ", inicie en el  GYM el " + getFechaInicioGim() + " y obtuve mi membresia el " +
                 getFechaInicioMem() + ", la cual tiene una duración de " + getDuracionMem() + ", es decir, se acaba el " +

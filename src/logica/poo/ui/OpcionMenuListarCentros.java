@@ -6,8 +6,8 @@ public class OpcionMenuListarCentros extends OpcionMenu{
 
     @Override
     public void ejecutar() {
-        OperacionesCentros op = new OperacionesCentros();
-        op.listarCentros();
+
+        OperacionesCentros.listarCentros();
         //System.out.println("Crack");
     }
 

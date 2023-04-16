@@ -5,29 +5,67 @@ import java.util.ArrayList;
 
 public class Centro {
 
-    private static int idCentro;
+    private static int idCentro = 1;
+    private int cont;
     private String nombre;
     private String direccion;
     private TipoCentro tipoCentro;
     private double tarifa;
     private ArrayList<Miembro> miembroCentro;
 
-    public Centro() {
-
-        miembroCentro = new ArrayList<Miembro>();
-    }
 
     public Centro(String nombre, String direccion, TipoCentro tipoCentro, double tarifa) {
-        getIdCentro();
+        this.cont = getIdCentro();
         this.nombre = nombre;
         this.direccion = direccion;
         this.tipoCentro = tipoCentro;
         this.tarifa = tarifa;
+        this.miembroCentro = new ArrayList<Miembro>();
     }
 
     public static int getIdCentro() {
 
         return idCentro++;
+    }
+
+    public int getCont() {
+        return cont;
+    }
+
+    public void setCont(int cont) {
+        this.cont = cont;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public TipoCentro getTipoCentro() {
+        return tipoCentro;
+    }
+
+    public void setTipoCentro(TipoCentro tipoCentro) {
+        this.tipoCentro = tipoCentro;
+    }
+
+    public double getTarifa() {
+        return tarifa;
+    }
+
+    public void setTarifa(double tarifa) {
+        this.tarifa = tarifa;
     }
 
     public ArrayList<Miembro> getMiembroCentro() {
@@ -57,11 +95,11 @@ public class Centro {
 
     @Override
     public String toString() {
-        return "Centro{" +
-                "nombre='" + nombre + '\'' +
-                ", direccion='" + direccion + '\'' +
-                ", tipoCentro=" + tipoCentro +
-                ", tarifa=" + tarifa +
+        return "Id del centro = " + cont +
+                ", nombre = " + nombre + '\'' +
+                ", direccion = ' " + direccion + '\'' +
+                ", tipoCentro = " + tipoCentro +
+                ", tarifa = " + tarifa +
                 '}';
     }
 }

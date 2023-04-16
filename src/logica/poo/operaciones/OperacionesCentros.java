@@ -8,11 +8,12 @@ import java.util.Scanner;
 
 public class OperacionesCentros {
 
-    private static ArrayList<Centro> c;
+    private static ArrayList<Centro> c = new ArrayList<Centro>();
 
-    public OperacionesCentros(){
-        c = new ArrayList<Centro>();
+    public static ArrayList<Centro> getC() {
+        return c;
     }
+
     public static void agregar(Centro centro){
         c.add(centro);
         System.out.println("Se ha agregado el centro.");
@@ -37,13 +38,11 @@ public class OperacionesCentros {
 
     }
     public static void listarCentros(){
-        for (int i = 0; i <= c.size(); i++){
-            System.out.println(getCentro().toString());
+        for(Centro centro:c){
+            System.out.println("\n" + c);
         }
     }
-    public static ArrayList<Centro> getCentro() {
-        return c;
-    }
+
 
     public static Centro buscarCentro(int idCentro){
         for(Centro centro : c){

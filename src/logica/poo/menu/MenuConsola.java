@@ -18,17 +18,22 @@ public class MenuConsola {
     }
 
     public void lanzarMenu(){
-        System.out.println("*** Menu de opciones ***");
-        for (int i=0; i < om.size(); i++){
-            System.out.println((i+1) + ". " + om.get(i));
-        }
-        System.out.println("6. Salir");
-        Scanner leer = new Scanner(System.in);
-        System.out.println("Indique el número de opción: ");
-        opcion = leer.nextInt();
+        //do{
+            System.out.println("*** Menu de opciones ***");
+            for (int i=0; i < om.size(); i++){
+                System.out.println((i+1) + ". " + om.get(i));
+            }
+            System.out.println((om.size()+1) + ". salir");
+            Scanner leer = new Scanner(System.in);
+            System.out.println("Indique el número de opción: ");
+            opcion = leer.nextInt();
 
-        if (opcion >= 1 && opcion <= om.size()){
-            om.get(opcion-1).ejecutar();
-        }
+            if (opcion >= 1 && opcion <= om.size()){
+                om.get(opcion-1).ejecutar();
+            }
+        /*}
+        while(opcion != om.size()+1);*/
+
+
     }
 }

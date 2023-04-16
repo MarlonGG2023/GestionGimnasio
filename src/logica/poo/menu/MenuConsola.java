@@ -33,7 +33,5 @@ public class MenuConsola {
             }
         }
         while(opcion != om.size()+1);
-
-
     }
 }

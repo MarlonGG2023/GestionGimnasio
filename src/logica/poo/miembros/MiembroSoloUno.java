@@ -34,15 +34,6 @@ public class MiembroSoloUno extends Miembro {
         this.centro = c;
     }
 
-    public LocalDate getFechaInicioMem(){
-        return getFechaInicioMem();
-    }
-
-    public int getDuracion(){
-
-        return getDuracion();
-    }
-
     @Override
     public String toString() {
 

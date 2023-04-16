@@ -1,8 +1,6 @@
 package logica.poo.inicio;
 
 import logica.poo.menu.MenuConsola;
-import logica.poo.miembros.Miembro;
-import java.util.ArrayList;
 import logica.poo.ui.*;
 
 public class GestionGimnasio {

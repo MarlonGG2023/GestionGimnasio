@@ -84,12 +84,12 @@ public class Centro {
         StringBuilder sb = new StringBuilder();
         for (Miembro miembro : miembroCentro){
 
-            sb.append("Id del centro de acondicionamiento: " + getIdCentro()).append(", ")
+            sb.append("Id del centro de acondicionamiento: " + cont).append(", ")
                     .append("nombre del centro de acondicionamiento: " + nombre).append(", ")
                     .append("número del miembro: " + miembro.getNumMiembro()).append(", ")
                     .append("nombre del miembro: " + miembro.getNombre()).append(", ")
                     .append("Apellido del miembro: " + miembro.getApellido()).append(", ")
-                    .append("Tipo de miembro: " + miembro);
+                    .append("Tipo de miembro: " + tipoCentro);
         }
         return sb.toString();
     }

@@ -43,9 +43,9 @@ public class OperacionesCentros {
     }
 
 
-    public static Centro buscarCentro(int idCentro){
+    public static Centro buscarCentro(int cont){
         for(Centro centro : c){
-            if(centro.getIdCentro() == idCentro){
+            if(centro.getCont() == cont){
                 return centro;
             }
         }

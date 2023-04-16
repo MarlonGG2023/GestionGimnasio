@@ -4,7 +4,7 @@ import java.time.LocalDate;
 public class Miembro {
 
     private int id;
-    private static int numMiembro;
+    private static int numMiembro = 1;
     private String nombre;
     private String apellido;
     private String correo;

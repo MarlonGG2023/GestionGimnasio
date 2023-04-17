@@ -4,15 +4,19 @@ import java.time.LocalDate;
 
 
 public class Membresia {
+
+    //Atributos
     private LocalDate fechaMembresia;
     private int duracion;
 
 
+    //Constructor
     public Membresia (LocalDate fechaMembresia, int duracion){
         this.fechaMembresia = fechaMembresia;
         this.duracion = duracion;
     }
 
+    //Métodos getter y setter
     public LocalDate getFechaMembresia(){
 
         return fechaMembresia;

@@ -5,15 +5,18 @@ import java.util.ArrayList;
 
 public class OperacionesMiembros {
 
-    private static ArrayList<Miembro> miembro = new ArrayList<Miembro>();
+    //Atributos
+    private static ArrayList<Miembro> miembro = new ArrayList<Miembro>(); //Almacena todos los miembros creados en el sistema
 
+
+    //Métodos
     public static void agregarMiembro(Miembro m){
         miembro.add(m);
     }
 
     public static Miembro buscarMiembro(int numMiembro){
         for(Miembro miembro : miembro){
-            if(miembro.getNumMiembro() == numMiembro){
+            if(miembro.getContM() == numMiembro){
                 return miembro;
             }
         }

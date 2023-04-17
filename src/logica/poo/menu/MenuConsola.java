@@ -4,13 +4,16 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class MenuConsola {
 
-    private ArrayList<OpcionMenu> om;
+    //Atributos
+    private ArrayList<OpcionMenu> om; //Almacena las opciones del menú
 
+    //Constructor
     public MenuConsola (){
 
         om = new ArrayList<OpcionMenu>();
     }
 
+    //Métodos
     public void anadirOpcion(OpcionMenu op){
 
         this.om.add(op);

@@ -3,6 +3,7 @@ import java.time.LocalDate;
 
 public class Miembro {
 
+    //Atributos
     private int id;
     private static int numMiembro = 1;
     private int contM;
@@ -15,6 +16,7 @@ public class Miembro {
     private String tipoClub;
 
 
+    //Constructor
     public Miembro(int id, String nombre, String apellido, String correo,
                    LocalDate fechaInicioGim, LocalDate fechaMembresia, int duracion, String tipoClub) {
 
@@ -29,6 +31,7 @@ public class Miembro {
         this.tipoClub = tipoClub;
     }
 
+    //Metodos getter y setter
     public int getId() {
         return id;
     }
@@ -109,11 +112,11 @@ public class Miembro {
     @Override
     public String toString() {
 
-        return "\nMi id: " + id +
-                "\nNúmero de miembro: " + contM +
-                "\nMe llamo: " + nombre  + "  " + apellido +
+        return "\nMi id: " + this.id +
+                "\nNúmero de miembro: " + this.contM +
+                "\nMe llamo: " + this.nombre  + " " + this.apellido +
                 "\nCorreo: " + correo +
-                "\nFecha inicio GYM: " + fechaInicioGim +
+                "\nFecha inicio GYM: " + this.fechaInicioGim +
                 "\nFecha membresia: " + membresia.getFechaMembresia() +
                 "\nDuración de la membresia: " + membresia.getDuracion() +
                 "\nFecha de vencimiento: " + membresia.getFechaVencimiento();

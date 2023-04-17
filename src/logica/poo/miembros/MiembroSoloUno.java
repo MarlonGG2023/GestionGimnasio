@@ -6,7 +6,6 @@ import java.time.LocalDate;
 
 public class MiembroSoloUno extends Miembro {
     private Centro centro;
-    private Membresia membresia;
 
     //segundo constructor
     public MiembroSoloUno (int id, String nombre, String apellido, String correo,

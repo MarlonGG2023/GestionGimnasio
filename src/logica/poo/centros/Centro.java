@@ -81,13 +81,14 @@ public class Centro {
         miembroCentro.add(m);
     }
 
+    //Metodo que concatena multiples lineas
     public String getMiembro() {
         StringBuilder sb = new StringBuilder();
         for (Miembro miembro : miembroCentro){
 
             sb.append("\nId del centro de acondicionamiento: " + this.cont)
                     .append("\nnombre del centro de acondicionamiento: " + this.nombre)
-                    .append("\nnúmero del miembro: " + miembro.getNumMiembro())
+                    .append("\nnúmero del miembro: " + miembro.getContM())
                     .append("\nnombre del miembro: " + miembro.getNombre())
                     .append("\nApellido del miembro: " + miembro.getApellido())
                     .append("\nTipo de miembro: " + miembro.getTipoClub() + "\n");

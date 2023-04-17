@@ -5,17 +5,20 @@ public class Miembro {
 
     private int id;
     private static int numMiembro = 1;
+    private int contM;
     private String nombre;
     private String apellido;
     private String correo;
     private LocalDate fechaInicioGim;
     private double deudaMiembro;
     private Membresia membresia;
+    private String tipoClub;
 
 
     public Miembro(int id, String nombre, String apellido, String correo,
-                   LocalDate fechaInicioGim, LocalDate fechaMembresia, int duracion) {
+                   LocalDate fechaInicioGim, LocalDate fechaMembresia, int duracion, String tipoClub) {
 
+        this.contM = getNumMiembro();
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -23,6 +26,7 @@ public class Miembro {
         this.fechaInicioGim = fechaInicioGim;
         membresia = new Membresia(fechaMembresia, duracion);
         membresia.getFechaVencimiento();
+        this.tipoClub = tipoClub;
     }
 
     public int getId() {
@@ -35,6 +39,14 @@ public class Miembro {
 
     public void setNumMiembro(int numMiembro) {
         return;
+    }
+
+    public int getContM() {
+        return contM;
+    }
+
+    public void setContM(int contM) {
+        this.contM = contM;
     }
 
     public String getNombre() {
@@ -90,14 +102,21 @@ public class Miembro {
         this.deudaMiembro = deudaMiembro;
     }
 
+    public String getTipoClub() {
+        return tipoClub;
+    }
+
     @Override
     public String toString() {
 
-        return "Mi id es " + getId() + ", mi número de miembro es " + getNumMiembro() +
-                ". Me llamo " + getNombre()  + "  " + getApellido() +  ",  mi correo es " +
-                getCorreo() + ", inicie en el  GYM el " + getFechaInicioGim() + " y obtuve mi membresia el " +
-                membresia.getFechaMembresia() + ", la cual tiene una duración de " + membresia.getDuracion() + ", es decir, se acaba el " +
-                membresia.getFechaVencimiento();
+        return "\nMi id: " + id +
+                "\nNúmero de miembro: " + contM +
+                "\nMe llamo: " + nombre  + "  " + apellido +
+                "\nCorreo: " + correo +
+                "\nFecha inicio GYM: " + fechaInicioGim +
+                "\nFecha membresia: " + membresia.getFechaMembresia() +
+                "\nDuración de la membresia: " + membresia.getDuracion() +
+                "\nFecha de vencimiento: " + membresia.getFechaVencimiento();
     }
 }
 

@@ -11,7 +11,7 @@ public class MiembroSoloUno extends Miembro {
     //segundo constructor
     public MiembroSoloUno (int id, String nombre, String apellido, String correo,
                            LocalDate fechaInicioGim, LocalDate fechaMembresia, int duracion){
-        super(id, nombre, apellido, correo, fechaInicioGim, fechaMembresia, duracion);
+        super(id, nombre, apellido, correo, fechaInicioGim, fechaMembresia, duracion, "Miembro Solo-Uno");
 
     }
 
@@ -37,10 +37,16 @@ public class MiembroSoloUno extends Miembro {
     @Override
     public String toString() {
 
-        return "El nombre del centro de acondicionamiento es " + centro.getNombre() + " y su ID es " + centro.getCont() + "Mi id es "
-                + getId() + ", mi número de miembro es " + getNumMiembro() + ". Me llamo " + getNombre()  + " " + getApellido() +  ",  mi correo es " +
-                getCorreo() + ", inicie en el  GYM el " + getFechaInicioGim() + " y obtuve mi membresia el " + getFechaMembresia() + ", la cual tiene una duración de " +
-                getDuracion() + ", es decir, se acaba el " + getFechaVencimiento();
+        return "\nNombre del centro de acondicionamiento: " + centro.getNombre() +
+                "\nID del centro de acondicionamiento: " + centro.getCont() +
+                "\nID miembro: " + getId() +
+                "\nNúmero de miembro: " + getContM() +
+                "\nNombre del miembro: " + getNombre()  + " " + getApellido() +
+                "\nCorreo del mimebro: " + getCorreo() +
+                "\nFecha de inicio GYM: " + getFechaInicioGim() +
+                "\nFecha de inicio de membresia: " + getFechaMembresia() +
+                "\nDuración de la membresia: " + getDuracion() +
+                "\nFecha de vencimiento de la membresia: " + getFechaVencimiento();
     }
 
 

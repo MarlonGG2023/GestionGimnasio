@@ -15,8 +15,10 @@ public class MultiClub extends Miembro {
 
     public MultiClub (int id, String nombre, String apellido, String correo,
                       LocalDate fechaInicioGim, LocalDate fechaMembresia, int duracion){
-            super(id, nombre, apellido, correo, fechaInicioGim, fechaMembresia, duracion);
+            super(id, nombre, apellido, correo, fechaInicioGim, fechaMembresia, duracion, "Miembro MultiClub");
 
+        setCentros();
+        sumarPuntos();
     }
 
     public int getPuntos(){

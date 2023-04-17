@@ -5,15 +5,17 @@ import java.util.ArrayList;
 
 public class Centro {
 
-    private static int idCentro = 1;
+    //Atributos de la clase Centro
+    private static int idCentro = 1; //Atributo para generar id de manera automatica
     private int cont;
     private String nombre;
     private String direccion;
     private TipoCentro tipoCentro;
     private double tarifa;
-    private static ArrayList<Miembro> miembroCentro;
+    private static ArrayList<Miembro> miembroCentro; //Lista de arreglos para almacenar los miembros de un centro
 
 
+    //Constructor de la clase Centro
     public Centro(String nombre, String direccion, TipoCentro tipoCentro, double tarifa) {
         this.cont = getIdCentro();
         this.nombre = nombre;
@@ -23,6 +25,7 @@ public class Centro {
         this.miembroCentro = new ArrayList<Miembro>();
     }
 
+    //Metodos Getter y Setter
     public static int getIdCentro() {
 
         return idCentro++;
@@ -30,10 +33,6 @@ public class Centro {
 
     public int getCont() {
         return cont;
-    }
-
-    public void setCont(int cont) {
-        this.cont = cont;
     }
 
     public String getNombre() {
@@ -76,6 +75,8 @@ public class Centro {
         this.miembroCentro = miembroCentro;
     }
 
+
+    //Metodos de la clase
     public void agregarMiembro(Miembro m) {
         miembroCentro.add(m);
     }
@@ -84,22 +85,22 @@ public class Centro {
         StringBuilder sb = new StringBuilder();
         for (Miembro miembro : miembroCentro){
 
-            sb.append("Id del centro de acondicionamiento: " + cont).append(", ")
-                    .append("nombre del centro de acondicionamiento: " + nombre).append(", ")
-                    .append("número del miembro: " + miembro.getNumMiembro()).append(", ")
-                    .append("nombre del miembro: " + miembro.getNombre()).append(", ")
-                    .append("Apellido del miembro: " + miembro.getApellido()).append(", ")
-                    .append("Tipo de miembro: " + tipoCentro);
+            sb.append("\nId del centro de acondicionamiento: " + this.cont)
+                    .append("\nnombre del centro de acondicionamiento: " + this.nombre)
+                    .append("\nnúmero del miembro: " + miembro.getNumMiembro())
+                    .append("\nnombre del miembro: " + miembro.getNombre())
+                    .append("\nApellido del miembro: " + miembro.getApellido())
+                    .append("\nTipo de miembro: " + miembro.getTipoClub() + "\n");
         }
         return sb.toString();
     }
 
     @Override
     public String toString() {
-        return "Id del centro = " + cont +
-                ", nombre = " + nombre + '\'' +
-                ", direccion = ' " + direccion + '\'' +
-                ", tipoCentro = " + tipoCentro +
-                ", tarifa = " + tarifa;
+        return "\nId del centro = " + cont +
+                "\nNombre = " + nombre +
+                "\nDireccion = " + direccion +
+                "\nTipoCentro = " + tipoCentro +
+                "\nTarifa = " + tarifa;
     }
 }

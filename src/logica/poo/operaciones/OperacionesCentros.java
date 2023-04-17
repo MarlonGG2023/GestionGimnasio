@@ -17,23 +17,6 @@ public class OperacionesCentros {
     public static void agregar(Centro centro){
         c.add(centro);
         System.out.println("Se ha agregado el centro.");
-        Scanner sc = new Scanner(System.in);
-        /*MenuConsola menu = new MenuConsola();
-        OpcionMenuCrearCentro omcc = new OpcionMenuCrearCentro();
-        System.out.println("Desea continuar operando en crear centro(si=1/no=0): ");
-        int resp = sc.nextInt();
-        if(resp == 1){
-            omcc.ejecutar();
-        }
-        else{
-            menu.anadirOpcion(new OpcionMenuCrearCentro());
-            menu.anadirOpcion(new OpcionMenuListarCentros());
-            menu.anadirOpcion(new OpcionMenuCrearMiembro());
-            menu.anadirOpcion(new OpcionMenuListarMiembros());
-            menu.anadirOpcion(new OpcionMenuMiembrosCentro());
-            menu.lanzarMenu();
-        }*/
-
     }
 
     public static void listarCentros(){

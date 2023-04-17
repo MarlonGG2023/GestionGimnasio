@@ -20,7 +20,7 @@ public class OpcionMenuCrearMiembro extends OpcionMenu{
         int opcion = sc.nextInt();
 
         if(opcion == 1){
-            System.out.println("Digite su id: ");
+            System.out.println("\nDigite su id: ");
             int id = sc.nextInt();
 
             String a = sc.nextLine();
@@ -52,33 +52,35 @@ public class OpcionMenuCrearMiembro extends OpcionMenu{
             OperacionesMiembros.agregarMiembro(msu);
 
         }
-        else if (opcion == 2) {
-            System.out.println("\nDigite su id: ");
-            int id = sc.nextInt();
+        else{
+            if (opcion == 2) {
+                System.out.println("\nDigite su id: ");
+                int id = sc.nextInt();
 
-            String a = sc.nextLine();
-            System.out.println("Digite su nombre: ");
-            String nombre = sc.nextLine();
+                String a = sc.nextLine();
+                System.out.println("Digite su nombre: ");
+                String nombre = sc.nextLine();
 
-            System.out.println("Digite su apellido: ");
-            String apellido = sc.nextLine();
+                System.out.println("Digite su apellido: ");
+                String apellido = sc.nextLine();
 
-            System.out.println("Digite su correo: ");
-            String correo = sc.nextLine();
+                System.out.println("Digite su correo: ");
+                String correo = sc.nextLine();
 
-            String b = sc.nextLine();
-            System.out.println("Digite su fecha de ingreso al centro de acondicionamiento:");
-            LocalDate fechaIG = LocalDate.parse(sc.nextLine());
+                String b = sc.nextLine();
+                System.out.println("Digite su fecha de ingreso al centro de acondicionamiento:");
+                LocalDate fechaIG = LocalDate.parse(sc.nextLine());
 
-            System.out.println("Digite su fecha de inicio de la membresia al centro de acondicionamiento: ");
-            LocalDate fechaIM = LocalDate.parse(sc.nextLine());
+                System.out.println("Digite su fecha de inicio de la membresia al centro de acondicionamiento: ");
+                LocalDate fechaIM = LocalDate.parse(sc.nextLine());
 
-            System.out.println("Digite la duración de la membresia: ");
-            int duracion = sc.nextInt();
-            
-            MultiClub mc = new MultiClub(id, nombre, apellido, correo, fechaIG, fechaIM, duracion);
-            OperacionesMiembros.agregarMiembro(mc);
+                System.out.println("Digite la duración de la membresia: ");
+                int duracion = sc.nextInt();
 
+                MultiClub mc = new MultiClub(id, nombre, apellido, correo, fechaIG, fechaIM, duracion);
+                OperacionesMiembros.agregarMiembro(mc);
+
+            }
         }
 
     }
